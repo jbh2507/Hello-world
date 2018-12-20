@@ -5,8 +5,11 @@ public class test {
 		final int BUGET = 50000;
 		int count = 10;
 		int totalPrice =  count * NOVEL_PRICE;
-		if (totalPrice > BUGET) count = count - 1;
-		totalPrice =  count * NOVEL_PRICE;
-		System.out.println(totalPrice);
+		
+		while(totalPrice > BUGET) {
+			totalPrice =  --count * NOVEL_PRICE;
+		}
+		                         
+		System.out.println("당신은 소설책을 "+count+"권 살 수 있습니다.");
 	}
 }
