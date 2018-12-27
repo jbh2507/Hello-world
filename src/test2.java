@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import kr.co.programers.javastudy.*;	// kr.co....의 클래스를 사용할 수 있도록 함
+
 public class test2 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
