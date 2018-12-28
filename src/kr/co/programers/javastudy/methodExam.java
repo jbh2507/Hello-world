@@ -2,7 +2,6 @@ package kr.co.programers.javastudy;
 
 public class methodExam {
 	// public '리턴타입' '메소드명' (매개변수){구현} 방식으로 메소드 선언
-	
 	public void method1 () {
 		System.out.println("method1 activated...");
 	}	// 들어오는 티런타입 X 파라미터 X
