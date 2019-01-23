@@ -21,6 +21,14 @@ public class arrayExam {
 		
 		System.out.println(value);
 		
+		int[] array4 = new int[4];
+		
+		System.out.println(array4[0]);
+		// 값이 지정되지 않은 int 배열 슬롯은 0을 반환한다. (str과 같은 객체타입의 배열은 null을 반환)
+		
+		System.out.println("array1 length: "+array1.length);
+		// .length를 사용하여 배열의 크기를 정수로 반환할 수 있다. (입력된 값의 수가 아니라 입력되지 않은 빈칸의 수까지 합한 배열의 크기)
+		
 		// 배열은 기본 데이터 타입이 아니라 참조형 타입임
 	}
 
