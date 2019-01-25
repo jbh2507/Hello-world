@@ -15,7 +15,7 @@ public class Main {
 			}
 			
 			if(numbers.add(1, 15)) {
-				System.out.println(numbers.getAll());
+				System.out.println(numbers);
 			}
 		}
 }

@@ -34,15 +34,30 @@ public class ArrayList {
 		return elementData[index];
 	}
 	
-	public String getAll() {
+	@Override
+	public String toString() {
 		StringBuffer sb = new StringBuffer();
 		for(int i = 0; i < size; i++) {
-			sb.append(elementData[i]+" ");
+			sb.append(elementData[i]);
+			if(i < size-1) {
+				sb.append(", ");
+			}
 		}
 		
-		return "{ "+sb.toString()+"}";
+		return "{"+sb.toString()+"}";
 	}
 	
-
-
+	public int size() {
+		return size;
+	}
+	
+	public int indexOf(Object element) {
+		for(int i = 0; i < size; i++) {
+			if(element.equals(elementData[i])) {
+				return i;
+			}
+		}
+		
+		return -1;
+	}
 }
