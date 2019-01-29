@@ -16,6 +16,12 @@ public class ArrayList {
 		elementData[index] = element;
 		size++;
 		
+		if(size >= elementData.length){
+            Object[] newArray = new Object[elementData.length+512];
+            System.arraycopy(elementData, 0, newArray, 0, elementData.length);
+            this.elementData = newArray;
+		}
+		
 		return elementData[index] == element && value.equals(elementData[size-1]);
 	}
 		
@@ -26,6 +32,12 @@ public class ArrayList {
 	public boolean addLast(Object element) {
 		elementData[size] = element;	// elemetData의 현재 size값의 슬롯에 생성자로 들어온 element를 넣음
 		size++;							// 그리고 size++ 시킴 이렇게하면 다음에 해당 메소드를 다시 실행시키면 다음 슬롯에 해당 값이 들어감
+		
+		if(size >= elementData.length){
+            Object[] newArray = new Object[elementData.length+512];
+            System.arraycopy(elementData, 0, newArray, 0, elementData.length);
+            this.elementData = newArray;
+		}
 		
 		return elementData[size-1] == element;	// 생성자의 값이 실제로 마지막 슬롯에 들어갔는지 boolean값을 반환
 	}

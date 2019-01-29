@@ -11,6 +11,13 @@ public class ArrayListExam {
 	    public boolean addLast(Object element) {
 	        elementData[size] = element;
 	        size++;
+	        
+	        if(size >= elementData.length){
+	            Object[] newArray = new Object[elementData.length+512];
+	            System.arraycopy(elementData, 0, newArray, 0, elementData.length);
+	            this.elementData = newArray;
+	        }
+	        
 	        return true;
 	    }
 	     
@@ -23,6 +30,13 @@ public class ArrayListExam {
 	        elementData[index] = element;
 	        // 엘리먼트의 숫자를 1 증가 시킵니다.
 	        size++;
+	        
+	        if(size >= elementData.length){
+	            Object[] newArray = new Object[elementData.length+512];
+	            System.arraycopy(elementData, 0, newArray, 0, elementData.length);
+	            this.elementData = newArray;
+	        }
+	        
 	        return true;
 	    }
 	     
